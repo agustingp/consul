@@ -31,6 +31,8 @@ set :local_user, ENV["USER"]
 set :delayed_job_workers, 2
 set :delayed_job_roles, :background
 
+set :ssh_options, {:forward_agent => true}
+
 set(:config_files, %w[
   log_rotation
   database.yml
